@@ -1,1 +1,1 @@
-/Users/wantedly/git/github.com/ShotaKashihara/dotfiles/config/.zsh
+/Users/shota/git/github.com/ShotaKashihara/dotfiles/config/.zsh

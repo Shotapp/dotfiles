@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 # zsh
-ln -sf ${BASEDIR}/config/.zshrc ~/.zshrc
-ln -sf ${BASEDIR}/config/.zsh ~/.zsh
+ln -sf ${SCRIPT_DIR}/config/.zshrc ~/.zshrc
+ln -sf ${SCRIPT_DIR}/config/.zsh ~/.zsh
 
 # git
-ln -sf ${BASEDIR}/config/.gitconfig ~/.gitconfig
+ln -sf ${SCRIPT_DIR}/config/.gitconfig ~/.gitconfig
 
 source ~/.zshrc
