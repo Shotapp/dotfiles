@@ -25,3 +25,5 @@
 	helper = osxkeychain
 [ghq]
 	root = ~/git
+[alias]
+	acp = !git add -A && git commit -m 'update' && git push
