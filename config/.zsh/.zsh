@@ -1,1 +1,0 @@
-/Users/shota/git/github.com/ShotaKashihara/dotfiles/config/.zsh
