@@ -6,7 +6,7 @@ A repository that gathered files starting with dot
 Download Xcode
 https://developer.apple.com/download/more/?=xcode
 
-Open Xcode and Install CommandLineTools
+Install Xcode and CommandLineTools
 
 Install brew 
 ```bash
