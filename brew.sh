@@ -11,6 +11,10 @@ brew upgrade
 brew install grep
 brew install git
 brew install git-lfs
+brew install rbenv
+brew install pyenv
+brew install nodenv
+brew install --cask visual-studio-code
 
 # iOS Development
 brew install carthage
