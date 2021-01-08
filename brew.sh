@@ -14,6 +14,9 @@ brew install git-lfs
 brew install rbenv
 brew install pyenv
 brew install nodenv
+brew install go
+brew install ghq
+brew install peco
 brew install --cask visual-studio-code
 
 # iOS Development
