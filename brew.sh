@@ -18,11 +18,25 @@ brew install nodenv
 brew install go
 brew install ghq
 brew install peco
-brew install tac
-brew install --cask visual-studio-code
-
-# iOS Development
+brew install mas
 brew install carthage
+brew install --cask zoomus
+brew install --cask visual-studio-code
+# Logi Capture
+brew install --cask docker
+brew install --cask proxyman
+brew install --cask alfred
+brew install --cask deepl
+brew install --cask google-chrome
+brew install --cask 1password
+brew install --cask zeplin
+brew install --cask bettertouchtool
+brew install --cask karabiner-elements
+brew install --cask station
+brew install --cask reveal
+brew install --cask sourcetree
+brew install --cask gifox
+brew install --cask skitch
 
 # Remove outdated versions from the cellar.
 brew cleanup
