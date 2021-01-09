@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# brew(arm)
+if [ $(arch | grep -e 'arm64') ]; then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
+
 # kube
 export PATH=$HOME/.wantedly/bin:$PATH
 
