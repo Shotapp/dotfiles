@@ -32,7 +32,6 @@ brew install --cask 1password
 brew install --cask zeplin
 brew install --cask bettertouchtool
 brew install --cask karabiner-elements
-brew install --cask station
 brew install --cask reveal
 brew install --cask sourcetree
 brew install --cask gifox

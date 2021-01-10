@@ -19,27 +19,19 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
-# if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
-#     autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-#     add-zsh-hook chpwd chpwd_recent_dirs
-#     zstyle ':completion:*' recent-dirs-insert both
-#     zstyle ':chpwd:*' recent-dirs-default true
-#     zstyle ':chpwd:*' recent-dirs-max 1000
-#     zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
-# fi
 
-# mkdir -p $HOME/.cache/shell/ 
+if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+    add-zsh-hook chpwd chpwd_recent_dirs
+    zstyle ':completion:*' recent-dirs-insert both
+    zstyle ':chpwd:*' recent-dirs-default true
+    zstyle ':chpwd:*' recent-dirs-max 1000
+    zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
+fi
 
-# function peco-cdr () {
-#   # local selected_dir="$(cdr -l | sed 's/^[0-9]\+ \+//g' | peco --prompt="cdr >" --query "$LBUFFER")"
-#     local selected_dir="$(cdr -l | sed -E 's/[0-9]\+//' | peco --prompt="cdr >" --query "$LBUFFER")"
-#     if [ -n "$selected_dir" ]; then
-#         BUFFER="cd ${selected_dir}"
-#         zle accept-line
-#     fi
-# }
+mkdir -p $HOME/.cache/shell/ 
 
-# ### search a destination from cdr list
+### search a destination from cdr list
 function peco-get-destination-from-cdr() {
   cdr -l  | \
   sed -e 's/^[[:digit:]]*[[:blank:]]*//' | \
