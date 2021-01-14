@@ -28,6 +28,6 @@
 [alias]
 	acp = !git add -A && git commit -m 'update' && git push
 [core]
-	excludesfile = /Users/shota/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
-	template = /Users/shota/.stCommitMsg
+	template = ~/.stCommitMsg
