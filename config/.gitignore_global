@@ -1,0 +1,15 @@
+*~
+.DS_Store
+node_modules/
+bower_components/
+DerivedData/
+.generators
+.idea/.generators
+.idea/.gitignore
+.idea/.rakeTasks
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/yashima-rails.iml
+dump.rdb
+settings.json

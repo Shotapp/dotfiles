@@ -1,6 +1,1 @@
-#!/usr/bin/env bash
-
-# Create a new directory and enter it
-function mkd() {
-	mkdir -p "$@" && cd "$_";
-}
+/Users/wantedly/git/github.com/ShotaKashihara/dotfiles/config/.zsh/functions.zsh
