@@ -4,3 +4,8 @@
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
+
+# 
+function ghqg() {
+	ghq get "https://github.com/$@.git"
+}
