@@ -5,7 +5,7 @@ if [ $(arch | grep -e 'arm64') ]; then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
-# kube
+# kube@wantedly
 export PATH=$HOME/.wantedly/bin:$PATH
 
 # xcode-install

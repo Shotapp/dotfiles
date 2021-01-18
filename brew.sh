@@ -20,6 +20,7 @@ brew install ghq
 brew install peco
 brew install mas
 brew install carthage
+brew install jq
 brew install --cask zoomus
 brew install --cask visual-studio-code
 # Logi Capture
