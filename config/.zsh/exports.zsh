@@ -16,8 +16,8 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 
 # Android Studio
-export ANDROID_HOME=/Users/wantedly/Library/Android/sdk
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
+export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
 
 # rbenv PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

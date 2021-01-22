@@ -28,7 +28,7 @@
 [alias]
 	acp = !git add -A && git commit -m 'update' && git push
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/shota/.gitignore_global
 [commit]
 	template = ~/.stCommitMsg
 [url "https://github.com/"]
