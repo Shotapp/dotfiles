@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 # brew(arm)
-if [ $(arch | grep -e 'arm64') ]; then
-  export PATH=/opt/homebrew/bin:$PATH
-fi
+export PATH=/opt/homebrew/bin:$PATH
 
 # kube@wantedly
 export PATH=$HOME/.wantedly/bin:$PATH
@@ -18,6 +16,8 @@ export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 # Android Studio
 export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
 export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
+
+alias s2bash="source ~/.zshrc"
 
 # rbenv PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

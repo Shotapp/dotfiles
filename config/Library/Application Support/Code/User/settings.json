@@ -1,4 +1,5 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "C_Cpp.updateChannel": "Insiders"
 }
