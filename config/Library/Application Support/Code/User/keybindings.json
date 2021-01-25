@@ -1,25 +1,25 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "shift+cmd+\\",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+cmd+\\",
-    "command": "workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "workbench.action.tasks.runTask",
-    "when": "editorTextFocus",
-    "args": "CheckTestCase"
-  },
-  {
-    "key": "ctrl+s",
-    "command": "workbench.action.tasks.runTask",
-    "when": "editorTextFocus",
-    "args": "SubmitCode"
-  }
+    {
+        "key": "shift+cmd+\\",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+\\",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.tasks.runTask",
+        "when": "editorTextFocus",
+        "args": "CheckTestCase"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.tasks.runTask",
+        "when": "editorTextFocus",
+        "args": "SubmitCode"
+    }
 ]

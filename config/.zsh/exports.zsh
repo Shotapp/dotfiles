@@ -9,6 +9,9 @@ export PATH=$HOME/.wantedly/bin:$PATH
 # xcode-install
 export XCODE_INSTALL_USER="shota@wantedly.com"
 
+# Xcode
+export XCODE_APP=$(xcode-select -p)/../../
+
 # valec
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
@@ -16,6 +19,8 @@ export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 # Android Studio
 export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
 export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
+# adb
+export PATH=$PATH:~/Library/Android/sdk/platform-tools/
 
 alias s2bash="source ~/.zshrc"
 
