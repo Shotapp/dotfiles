@@ -7,6 +7,17 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
 '
 
+function fzf-find-current () {
+  local selected_dir=$(find . | fzf --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="code ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fzf-find-current
+bindkey '^\' fzf-find-current
+
 function fzf-ghq-list () {
   local selected_dir=$(ghq list -p | fzf --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then

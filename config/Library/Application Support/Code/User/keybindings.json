@@ -21,5 +21,10 @@
         "command": "workbench.action.tasks.runTask",
         "when": "editorTextFocus",
         "args": "SubmitCode"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus && terminalProcessSupported"
     }
 ]
