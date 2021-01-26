@@ -18,6 +18,7 @@ brew install nodenv
 brew install go
 brew install ghq
 brew install peco
+brew install fzf
 brew install mas
 brew install carthage
 brew install jq
