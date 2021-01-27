@@ -48,27 +48,3 @@ if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]
 fi
 
 mkdir -p $HOME/.cache/shell/ 
-
-### search a destination from cdr list
-function peco-get-destination-from-cdr() {
-  cdr -l  | \
-  sed -e 's/^[[:digit:]]*[[:blank:]]*//' | \
-  # awk '{c=gsub("/","/"); print c,length($0),$0}' | \
-  sort -n | \
-  # cut -d ' ' -f 3 | \
-  peco --query "$LBUFFER"
-}
-
-### search a destination from cdr list and cd the destination
-function peco-cdr() {
-  local destination="$(peco-get-destination-from-cdr)"
-  if [ -n "$destination" ]; then
-    BUFFER="cd $destination"
-    zle accept-line
-  else
-    zle reset-prompt
-  fi
-}
-
-zle -N peco-cdr
-bindkey '^E' peco-cdr
