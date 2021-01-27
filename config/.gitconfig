@@ -29,6 +29,7 @@
 	acp = !git add -A && git commit -m 'update' && git push
 [core]
 	excludesfile = /Users/shota/.gitignore_global
+	editor = code --wait
 [commit]
 	template = ~/.stCommitMsg
 [url "https://github.com/"]
