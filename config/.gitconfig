@@ -3,7 +3,7 @@
 	email = mercury4th@gmail.com
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -28,8 +28,6 @@
 [core]
 	excludesfile = /Users/shota/.gitignore_global
 	editor = code --wait
-[commit]
-	template = ~/.stCommitMsg
 [url "https://github.com/"]
 	insteadOf = git@github.com:
 [url "https://"]
