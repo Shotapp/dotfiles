@@ -12,4 +12,8 @@ for FILE in `find config -type f | sed "s/config\///"`; do
 done
 IFS=$' \t\n'
 
+unlink ~/Library/Developer/Xcode/UserData/CodeSnippets
+rm -rf ~/Library/Developer/Xcode/UserData/CodeSnippets
+ln -snfv ${SCRIPT_DIR}/Xcode/CodeSnippets ~/Library/Developer/Xcode/UserData
+
 source ~/.zshrc
