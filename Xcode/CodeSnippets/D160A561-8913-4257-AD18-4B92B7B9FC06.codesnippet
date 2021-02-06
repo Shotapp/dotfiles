@@ -10,6 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func main() {
+    &lt;##&gt;
 }
 main()
 
