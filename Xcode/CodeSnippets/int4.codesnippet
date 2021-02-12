@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>int4</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;, &lt;#p#&gt;): (Int, Int, Int, Int) = { let l = readLine()!.components(separatedBy: " "); return (Int(l[0])!, Int(l[1])!, Int(l[2])!, Int(l[3])!) }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9186B0E0-0566-4F56-8C1E-C1423093C8FE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Read (Int, Int, Int, Int)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

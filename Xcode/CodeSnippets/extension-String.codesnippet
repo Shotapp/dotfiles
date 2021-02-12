@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>extensionString</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension String {
+    // "ABC"[1] -&gt; "B"
+    subscript(i: Int) -&gt; Character {
+        get {
+            self[index(at: i)]
+        }
+        set(char) {
+            var characters = Array(self)
+            characters[i] = char
+            self = String(characters)
+        }
+    }
+    func index(at offset: Int) -&gt; String.Index { index(startIndex, offsetBy: offset) }
+    // "ABC".swapAt(0, 1) -&gt; "BAC"
+    mutating func swapAt(_ index1: Int, _ index2: Int) {
+        var characters = Array(self)
+        characters.swapAt(index1, index2)
+        self = String(characters)
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F0185D0C-3BD7-4B83-95F3-FD878A3DE782</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>extension String</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
