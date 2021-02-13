@@ -6,8 +6,8 @@
 	<string>int3</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
 		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;): (Int, Int, Int) = { let l = readLine()!.components(separatedBy: " "); return (Int(l[0])!, Int(l[1])!, Int(l[2])!) }()</string>
@@ -22,6 +22,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
