@@ -6,8 +6,10 @@
 	<string>int3</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
 		<string>TopLevel</string>
+		<string>ClassImplementation</string>
+		<string>StringOrComment</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;): (Int, Int, Int) = { let l = readLine()!.split(separator: " ").map(String.init); return (Int(l[0])!, Int(l[1])!, Int(l[2])!) }()</string>

@@ -6,8 +6,10 @@
 	<string>string</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
 		<string>TopLevel</string>
+		<string>ClassImplementation</string>
+		<string>StringOrComment</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#str#&gt; = readLine()!</string>
