@@ -10,7 +10,7 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;, &lt;#p#&gt;): (Int, Int, Int, Int) = { let l = readLine()!.components(separatedBy: " "); return (Int(l[0])!, Int(l[1])!, Int(l[2])!, Int(l[3])!) }()</string>
+	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;, &lt;#p#&gt;): (Int, Int, Int, Int) = { let l = readLine()!.split(separator: " ").map(String.init); return (Int(l[0])!, Int(l[1])!, Int(l[2])!, Int(l[3])!) }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9186B0E0-0566-4F56-8C1E-C1423093C8FE</string>
 	<key>IDECodeSnippetLanguage</key>

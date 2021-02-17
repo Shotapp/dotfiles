@@ -6,24 +6,27 @@
 	<string>varrayint4</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#varray#&gt; = (0..&lt;&lt;#count#&gt;).map { _ in readLine()! }.map { s -&gt; (Int, Int, Int, Int) in
-        let l = s.components(separatedBy: " "); return (Int(l[0])!, Int(l[1])!, Int(l[2])!, Int(l[3])!)
-    }</string>
+	<string>let (&lt;#a#&gt;, &lt;#b#&gt;, &lt;#c#&gt;, &lt;#d#&gt;) = (0..&lt;&lt;#count#&gt;).reduce(into: ([Int](), [Int](), [Int](), [Int]())) { r, _ in
+    let l = readLine()!.split(separator: " ").map(String.init)
+    r.0.append(Int(l[0])!)
+    r.1.append(Int(l[1])!)
+    r.2.append(Int(l[2])!)
+    r.3.append(Int(l[3])!)
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7DFCDA36-771D-4811-BB43-5D4DF76D771C</string>
+	<string>E82075BB-E983-400B-B4D0-87ECB209B561</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read VArray&lt;(Int, Int, Int, Int)&gt;</string>
+	<string>Read V(Array&lt;Int&gt;, Array&lt;Int&gt;, Array&lt;Int&gt;, Array&lt;Int&gt;)</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

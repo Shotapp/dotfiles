@@ -3,25 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>arrayint</string>
+	<string>tousasuuretsu</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init).map { Int($0)! }</string>
+	<string>func 等差数列の和(a 初項: Int, l 末項: Int, n 項数: Int, d 公差: Int) -&gt; Int {
+    (2*初項+(項数-1)*公差)*項数/2
+}
+
+func 等差数列の和(a 初項: Int, l 末項: Int) -&gt; Int {
+    (初項+末項)*(末項-初項+1)/2
+}
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>23FD6728-007D-4036-AEAA-5C9E71A10847</string>
+	<string>99C996BD-7F92-4D0D-87B1-9CE1E3F07D19</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read Array&lt;Int&gt;</string>
+	<string>等差数列の和</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

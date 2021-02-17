@@ -10,7 +10,7 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#array#&gt; = readLine()!.components(separatedBy: " ")</string>
+	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BB9CE3C2-9E66-46EF-8429-22E7B6247446</string>
 	<key>IDECodeSnippetLanguage</key>
