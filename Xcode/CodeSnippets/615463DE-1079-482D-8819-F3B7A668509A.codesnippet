@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>radix2int</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>StringOrComment</string>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension Int {
+    /// radix 進数の文字列から10進数に変換
+    /// Int("111", byRadix: 2) == 7 
+    /// Int("111", byRadix: 4) == 21
+    /// Int("111", byRadix: 8) == 73
+    /// https://atcoder.jp/contests/abc192/tasks/abc192_d
+    init?(_ string: String, byRadix: Int) {
+        var result = 0
+        for x in string.map(\.hexDigitValue!) {
+            let (d1, e1) = result.multipliedReportingOverflow(by: radix)
+            if e1 {
+                return nil
+            }
+            let (d2, e2) = d1.addingReportingOverflow(x)
+            if e2 {
+                return nil
+            }
+            result = d2
+        }
+        self = result
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>615463DE-1079-482D-8819-F3B7A668509A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>N進数の文字列から10進数に変換</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

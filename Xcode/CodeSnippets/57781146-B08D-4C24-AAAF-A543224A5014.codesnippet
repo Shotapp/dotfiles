@@ -3,30 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>digits</string>
+	<string>roundup</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
-		<string>TopLevel</string>
 		<string>StringOrComment</string>
+		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>extension Int {
-    // 123 -&gt; [1, 2, 3]
-    var digits: [Int] { Array(String(self)).map { Int(String($0))! } }
+	<string>infix operator /+: MultiplicationPrecedence // 切り上げ
+func /+ (lhs: Int, rhs: Int) -&gt; Int {
+    lhs &gt;= 0 ? (lhs + rhs - 1) / rhs : lhs / rhs
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1D7A69D1-168B-4F70-9B25-E83575AA1E16</string>
+	<string>57781146-B08D-4C24-AAAF-A543224A5014</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>123 -&gt; [1, 2, 3]</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>digits</string>
+	<string>切り上げ /+</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dijkstra template</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>StringOrComment</string>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct BinaryHeap&lt;Value: Comparable&gt; {
+    var heap: [Value]
+    
+    mutating func insert(_ v: Value) {
+        var k = heap.count
+        heap.append(v)
+        while k &gt; 0 {
+            let p = (k - 1) / 2
+            if heap[p] &gt; heap[k] {
+                heap.swapAt(k, p)
+                k = p
+            } else {
+                break
+            }
+        }
+    }
+    
+    mutating func extractMin() -&gt; Value? {
+        guard let result = heap.first else { return nil }
+        heap.swapAt(0, heap.endIndex - 1)
+        heap.removeLast()
+        var k = 0
+        while true {
+            var l = k
+            for c in [k * 2 + 1, k * 2 + 2] where c &lt; heap.count &amp;&amp; heap[l] &gt; heap[c] {
+                l = c
+            }
+            if k == l {
+                break
+            }
+            heap.swapAt(k, l)
+            k = l
+        }
+        return result
+    }
+}
+
+struct State: Comparable {
+    let vertex: Int // 頂点
+    let distance: Int // 距離
+    
+    static func &lt; (lhs: State, rhs: State) -&gt; Bool {
+        lhs.distance &lt; rhs.distance
+    }
+}
+
+struct Edge {
+    let next: Int // 向き先
+    let weight: Int // 重み
+}
+
+func dijkstra(start: Int, vertexCount: Int, edges: [[Edge]]) -&gt; [Int] {
+    var heap = BinaryHeap&lt;State&gt;(heap: [.init(vertex: start, distance: 0)])
+    var distance = [Int].init(repeating: Int.max, count: vertexCount)
+    distance[start] = 0
+    
+    while let state = heap.extractMin() {
+        guard state.distance &lt;= distance[state.vertex] else { 
+            continue /// 他の最短経路が見つかった
+        }
+        for edge in edges[state.vertex] {
+            ///
+            /// 重みの加算
+            ///
+            let newDistance = state.distance + edge.weight
+            if distance[edge.next] &gt; newDistance {
+                distance[edge.next] = newDistance
+                heap.insert(.init(vertex: edge.next, distance: newDistance))
+            }
+        }
+    }
+    
+    return distance
+}
+
+let vertexCount = &lt;#N#&gt;
+let edgeCount = &lt;#M#&gt;
+let start = &lt;#X#&gt;
+let end = &lt;#Y#&gt;
+
+var G: [[Edge]] = .init(repeating: [], count: vertexCount)
+(0..&lt;edgeCount).forEach { _ in
+    let A = Int(readLine()!)! - 1
+    let B = Int(readLine()!)! - 1
+    let W = Int(readLine()!)!
+    
+    G[A].append(.init(next: B, weight: W))
+    G[B].append(.init(next: A, weight: W))
+}
+
+let distance = dijkstra(start: start, vertexCount: vertexCount, edges: G)
+print(distance[end])
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>660E2672-50DD-4811-A663-A05F33D4E5CB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ダイクストラ・テンプレート</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

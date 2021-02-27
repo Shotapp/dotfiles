@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BinaryHeap</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+		<string>StringOrComment</string>
+		<string>ClassImplementation</string>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct BinaryHeap&lt;Value: Comparable&gt; {
+    var heap: [Value]
+ 
+    init() {
+        self.heap = []
+    }
+ 
+    mutating func insert(_ v: Value) {
+        var k = heap.count
+        heap.append(v)
+        while k &gt; 0 {
+            let p = (k - 1) / 2
+            if heap[p] &gt; heap[k] {
+                heap.swapAt(k, p)
+                k = p
+            } else {
+                break
+            }
+        }
+    }
+ 
+    mutating func extractMin() -&gt; Value? {
+        guard let result = heap.first else { return nil }
+        heap.swapAt(0, heap.endIndex - 1)
+        heap.removeLast()
+        var k = 0
+        while true {
+            var l = k
+            for c in [k * 2 + 1, k * 2 + 2] where c &lt; heap.count &amp;&amp; heap[l] &gt; heap[c] {
+                l = c
+            }
+            if k == l {
+                break
+            }
+            heap.swapAt(k, l)
+            k = l
+        }
+        return result
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DD3FB535-E598-46BF-B0E8-E1C881BF46F8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>二分ヒープ. ダイクストラとかで使う</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BinaryHeap</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

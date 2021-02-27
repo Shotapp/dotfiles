@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>binarySearch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>TopLevel</string>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// `[ok..&lt;ng]`な半開区間の binarySearch
+/// - Parameters:
+///   - ok: 明らかに `true` な値
+///   - ng: 明らかに `false` な値
+///   - predicate: [ok..&lt;ng] をちょうど２分割した点Pについて、
+///   条件を満たしていれば`return true` なら ok の位置を点Pまで移動する。
+///   条件を満たしていなければ `return false` なら ng の位置を点Pまで移動する。
+func binarySearch(ok: Int, ng: Int, _ predicate: (Int) -&gt; Bool) -&gt; Int {
+    var ok = ok
+    var ng = ng
+    while abs(ok - ng) &gt; 1 {
+        // (ok + ng) / 2 を Overflow しないように式変形したもの
+        let P = ng + (ok - ng) / 2
+        if predicate(P) {
+            ok = P
+        } else {
+            ng = P
+        }
+    }
+    return ok
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>30CA29D6-B167-4131-87E6-48C4EDEEF001</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BinarySearch</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

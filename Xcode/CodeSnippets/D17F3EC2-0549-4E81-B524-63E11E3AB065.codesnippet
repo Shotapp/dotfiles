@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ncr</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>TopLevel</string>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func ncr&lt;Integer&gt;(_ n: Integer, _ r: Integer, modulus: Integer?) -&gt; Integer where Integer: BinaryInteger, Integer.Stride: SignedInteger {
+    precondition(n &gt;= 0)
+    precondition(r &gt;= 0)
+    precondition(n &gt;= r)
+    if let modulus = modulus {
+        precondition(modulus &gt;= 1)
+        func npr(_ n: Integer, _ r: Integer, modulus: Integer) -&gt; Integer {
+            (n - r + 1 ..&lt; n + 1).reduce(into: 1) { $0 = ($0 * $1) % modulus }
+        }
+        func pow(_ a: Integer, _ b: Integer, modulus: Integer) -&gt; Integer {
+            var result: Integer = .init(1)
+            var a = a
+            var b = b
+            while true {
+                if b &amp; 0x1 != .zero {
+                    result = (result * a) % modulus
+                }
+                b &gt;&gt;= 1
+                guard b &gt; .zero else { break }
+                a = (a * a) % modulus
+            }
+            return result
+        }
+        let numerator = npr(n, r, modulus: modulus)
+        let denominator = npr(r, r, modulus: modulus)
+        return (numerator * pow(denominator, modulus - 2, modulus: modulus)) % modulus
+    } else {
+        let range: Range&lt;Integer&gt; = 1 ..&lt; r + 1
+        return range.reduce(into: 1 as Integer) { $0 = $0 * (n - $1 + 1) / $1 }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D17F3EC2-0549-4E81-B524-63E11E3AB065</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>nCr mod N</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

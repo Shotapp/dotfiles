@@ -3,27 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>digits</string>
+	<string>alphabets</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 		<string>CodeBlock</string>
-		<string>TopLevel</string>
 		<string>StringOrComment</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>extension Int {
-    // 123 -&gt; [1, 2, 3]
-    var digits: [Int] { Array(String(self)).map { Int(String($0))! } }
-}</string>
+	<string>let ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let alphabets = "abcdefghijklmnopqrstuvwxyz"</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1D7A69D1-168B-4F70-9B25-E83575AA1E16</string>
+	<string>DC746E94-FF6A-409D-90C1-1C190B94673A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>123 -&gt; [1, 2, 3]</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>digits</string>
+	<string>Alphabets</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
