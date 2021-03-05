@@ -1,5 +1,19 @@
 {
     "workbench.startupEditor": "newUntitledFile",
     "explorer.confirmDelete": false,
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "leetcode.workspaceFolder": "/Users/shota/git/github.com/ShotaKashihara/leetcode-swift",
+    "leetcode.defaultLanguage": "swift",
+    "leetcode.filePath": {
+        "default": {
+            "folder": "solutions",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        }
+    },
+    "leetcode.showDescription": "Both",
+    "leetcode.hint.setDefaultLanguage": false,
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "files.autoSave": "onFocusChange",
 }
