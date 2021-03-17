@@ -16,4 +16,5 @@
     "leetcode.hint.commandShortcut": false,
     "leetcode.hint.configWebviewMarkdown": false,
     "files.autoSave": "onFocusChange",
+    "debug.onTaskErrors": "showErrors",
 }
