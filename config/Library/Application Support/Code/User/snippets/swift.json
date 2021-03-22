@@ -1,0 +1,33 @@
+{
+	"assert": {
+		"prefix": "assert",
+		"body": [
+			"func assert<Input, Output: Equatable>(_ solution: (Input) -> Output, input: Input, expect: Output) {",
+			"    let result = solution(input) == expect ? \"\\u{001B}[0;32m\" + \"[AC]\" + \"\\u{001B}[0;0m\" : \"\\u{001B}[0;31m\" + \"[WA]\" + \"\\u{001B}[0;0m\"",
+			"    print(result, \"\\nAnswer:         \", solution(input), \"\\nExpected Answer:\", expect)",
+			"}",
+			"",
+			"assert(Solution()${1:.}, input: ${2:[1,2,3]}, expect: ${3:[4,5,6]})",
+			""
+		],
+		"description": "Test your solution"
+	},
+	"TreeNode": {
+		"prefix": "treenode",
+		"body": [
+			"public class TreeNode {",
+			"    public var val: Int",
+			"    public var left: TreeNode?",
+			"    public var right: TreeNode?",
+			"    public init() { self.val = 0; self.left = nil; self.right = nil; }",
+			"    public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }",
+			"    public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {",
+			"        self.val = val",
+			"        self.left = left",
+			"        self.right = right",
+			"    }",
+			"}"
+		],
+		"description": ""
+	}
+}

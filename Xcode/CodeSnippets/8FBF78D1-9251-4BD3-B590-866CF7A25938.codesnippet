@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>permutations</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
+		<string>TopLevel</string>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension Sequence {
+    func permutations() -&gt; [[Element]] {
+        func _permutations&lt;T&gt;(of values: [T], indices: Range&lt;Int&gt;, result: inout [[T]]) {
+            if indices.isEmpty {
+                result.append(values)
+                return
+            }
+            var values = values
+            for i in indices {
+                values.swapAt(indices.lowerBound, i)
+                _permutations(of: values, indices: (indices.lowerBound + 1) ..&lt; indices.upperBound, result: &amp;result)
+            }
+        }
+
+        var result: [[Element]] = []
+        let values = Array(self)
+        _permutations(of: values, indices: values.indices, result: &amp;result)
+        return result
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8FBF78D1-9251-4BD3-B590-866CF7A25938</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Permutations - 順列全探索</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

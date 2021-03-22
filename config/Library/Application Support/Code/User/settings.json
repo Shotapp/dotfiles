@@ -17,5 +17,4 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "files.autoSave": "onFocusChange",
     "debug.onTaskErrors": "showErrors",
-    "window.zoomLevel": 1,
 }

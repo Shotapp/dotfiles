@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>roundup</string>
+	<string>Array2D</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -12,18 +12,34 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>infix operator /+: MultiplicationPrecedence // 切り上げ
-func /+ (lhs: Int, rhs: Int) -&gt; Int {
-    lhs &gt;= 0 ? (lhs + rhs - 1) / rhs : lhs / rhs
+	<string>struct Array2D&lt;Element&gt; {
+    let n1: Int
+    let n2: Int
+    private var elements: [Element]
+ 
+    init(repeating: Element, _ n1: Int, _ n2: Int) {
+        self.n1 = n1
+        self.n2 = n2
+        self.elements = [Element](repeating: repeating, count: n1 * n2)
+    }
+ 
+    subscript(i: Int, j: Int) -&gt; Element {
+        get {
+            elements[i * n2 + j]
+        }
+        set {
+            elements[i * n2 + j] = newValue
+        }
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>57781146-B08D-4C24-AAAF-A543224A5014</string>
+	<string>DDEE6546-1401-4450-B92E-825E4796D6FB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>切り上げ /+</string>
+	<string>Array2D</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
