@@ -17,8 +17,7 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 
 # Android Studio
-export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
-export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 # adb
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 

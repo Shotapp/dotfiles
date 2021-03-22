@@ -26,5 +26,17 @@
         "key": "shift+cmd+j",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+k t",
+        "command": "leetcode.testSolution"
+    },
+    {
+        "key": "cmd+k s",
+        "command": "leetcode.submitSolution"
+    },
+    {
+        "key": "cmd+k l",
+        "command": "leetcode.showSolution"
     }
 ]
