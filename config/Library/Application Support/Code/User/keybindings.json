@@ -38,5 +38,21 @@
     {
         "key": "cmd+k l",
         "command": "leetcode.showSolution"
+    },
+    {
+        "key": "cmd+p",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
     }
 ]
