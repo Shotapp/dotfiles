@@ -19,7 +19,7 @@ export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 # Android Studio
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 # adb
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
+export PATH=$PATH:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/tools
 
 alias s2bash="source ~/.zshrc"
 
