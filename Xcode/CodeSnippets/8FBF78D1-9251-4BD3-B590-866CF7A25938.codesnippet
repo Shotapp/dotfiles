@@ -12,26 +12,50 @@
 		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>extension Sequence {
-    func permutations() -&gt; [[Element]] {
-        func _permutations&lt;T&gt;(of values: [T], indices: Range&lt;Int&gt;, result: inout [[T]]) {
-            if indices.isEmpty {
-                result.append(values)
-                return
-            }
-            var values = values
-            for i in indices {
-                values.swapAt(indices.lowerBound, i)
-                _permutations(of: values, indices: (indices.lowerBound + 1) ..&lt; indices.upperBound, result: &amp;result)
-            }
-        }
+	<string>/// `(0...10).permutations`
+struct PermutationSequence&lt;Element: Comparable&gt;: Sequence {
+    private let elements: [Element]
 
-        var result: [[Element]] = []
-        let values = Array(self)
-        _permutations(of: values, indices: values.indices, result: &amp;result)
-        return result
+    struct Iterator: IteratorProtocol {
+        var elements: [Element]
+        var finished = false
+
+        mutating func next() -&gt; [Element]? {
+            guard !finished else { return nil }
+            let result = elements
+            var i = elements.count - 2
+            while i &gt;= 0, elements[i] &gt;= elements[i + 1] {
+                i -= 1
+            }
+            if i &lt; 0 {
+                finished = true
+            } else {
+                var j = elements.count - 1
+                while elements[i] &gt;= elements[j] {
+                    j -= 1
+                }
+                elements.swapAt(i, j)
+                elements[(i + 1)...].reverse()
+            }
+            return result
+        }
     }
-}</string>
+
+    init&lt;Elements: Sequence&gt;(elements: Elements) where Elements.Element == Element {
+        self.elements = Array(elements)
+    }
+
+    func makeIterator() -&gt; Iterator {
+        return Iterator(elements: elements)
+    }
+}
+
+extension Sequence where Element: Comparable {
+    var permutations: PermutationSequence&lt;Element&gt; {
+        PermutationSequence(elements: self)
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>8FBF78D1-9251-4BD3-B590-866CF7A25938</string>
 	<key>IDECodeSnippetLanguage</key>
