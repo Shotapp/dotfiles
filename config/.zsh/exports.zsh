@@ -17,21 +17,20 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin:$GOPATH/src/github.com/dtan4/valec/bin
 
 # Android Studio
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 # adb
 export PATH=$PATH:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/tools
 
 alias s2bash="source ~/.zshrc"
 
 # rbenv PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
