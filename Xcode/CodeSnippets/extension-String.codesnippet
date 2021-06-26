@@ -6,14 +6,14 @@
 	<string>extensionString</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
 		<string>ClassImplementation</string>
-		<string>StringOrComment</string>
 		<string>CodeBlock</string>
+		<string>TopLevel</string>
+		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension String {
-    // "ABC"[1] -&gt; "B"
+    /// O(n)
     subscript(i: Int) -&gt; Character {
         get {
             self[index(at: i)]

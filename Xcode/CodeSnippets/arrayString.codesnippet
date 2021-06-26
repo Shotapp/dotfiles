@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>arraystring</string>
+	<string>stringarray</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
 		<string>ClassImplementation</string>
-		<string>StringOrComment</string>
 		<string>CodeBlock</string>
+		<string>TopLevel</string>
+		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init)</string>

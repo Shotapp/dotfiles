@@ -12,7 +12,7 @@
 		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// `[ok..&lt;ng]`な半開区間の binarySearch
+	<string>/// `[ok ..&lt; ng]` or `[ng ..&lt; ok]`な半開区間binarySearch
 /// - Parameters:
 ///   - ok: 明らかに `true` な値
 ///   - ng: 明らかに `false` な値

@@ -9,8 +9,13 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func gcd(a: Int, b: Int) -&gt; Int {
+	<string>/// 2つの最大公約数
+func gcd(a: Int, b: Int) -&gt; Int {
     return b == 0 ? a : gcd(a: b, b: a % b)
+}
+/// 3つ以上の最大公約数
+func gcd(c: [Int]) -&gt; Int {
+    c.reduce(0, { gcd(a: $0, b: $1) })
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6174B4B2-4F1D-4F9A-B50E-7AB1230CE95F</string>
@@ -19,7 +24,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>最大公約数</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>gcd</string>
+	<string>最大公約数 - gcd</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

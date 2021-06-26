@@ -13,25 +13,47 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>struct Array2D&lt;Element&gt; {
-    let n1: Int
-    let n2: Int
+    let x: Int
+    let y: Int
     private var elements: [Element]
- 
-    init(repeating: Element, _ n1: Int, _ n2: Int) {
-        self.n1 = n1
-        self.n2 = n2
-        self.elements = [Element](repeating: repeating, count: n1 * n2)
+
+    init(repeating: Element, _ x: Int, _ y: Int) {
+        self.x = x
+        self.y = y
+        self.elements = [Element](repeating: repeating, count: x * y)
     }
- 
-    subscript(i: Int, j: Int) -&gt; Element {
+
+    subscript(x: Int, y: Int) -&gt; Element {
         get {
-            elements[i * n2 + j]
+            elements[x + y * self.x]
         }
         set {
-            elements[i * n2 + j] = newValue
+            elements[x + y * self.x] = newValue
         }
     }
-}</string>
+}
+
+extension Optional: CustomStringConvertible where Wrapped: CustomStringConvertible {
+    public var description: String {
+        self?.description ?? "nil"
+    }
+}
+
+extension Array2D: CustomStringConvertible where Element: CustomStringConvertible {
+    var padding: Int { elements.map(\.description.count).max() ?? 0 }
+    var paddingStr: String { Array(repeating: " ", count: padding).joined() }
+    var description: String {
+        var text = "x: \(x), y: \(y)"
+        for i in 0..&lt;y {
+            text += "\n"
+            text += elements[i * x ..&lt; i * x + x]
+                .map { (paddingStr + $0.description).suffix(padding) }
+                .joined(separator: " ")
+        }
+        return text
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DDEE6546-1401-4450-B92E-825E4796D6FB</string>
 	<key>IDECodeSnippetLanguage</key>

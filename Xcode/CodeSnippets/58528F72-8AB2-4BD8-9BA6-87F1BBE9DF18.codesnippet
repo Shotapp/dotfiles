@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>upper_bound</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension Array where Element: Comparable {
+    /// ソートされた配列内で、key より大きいの要素の内の一番左側のインデックスを返す
+    func upperBound(_ value: Element) -&gt; Int {
+        var left = 0
+        var right = self.count
+        while (left &lt; right) {
+            let mid = left + (right - left) / 2
+            if (self[mid] &lt;= value) {
+                left = mid + 1
+            } else {
+                right = mid
+            }
+        }
+        return left
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>58528F72-8AB2-4BD8-9BA6-87F1BBE9DF18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>upper_bound - Binary Search</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

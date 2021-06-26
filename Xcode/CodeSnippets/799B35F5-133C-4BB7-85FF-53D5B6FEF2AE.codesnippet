@@ -3,24 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>intarray</string>
+	<string>lower_bound</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
 		<string>TopLevel</string>
-		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init).map { Int($0)! }</string>
+	<string>extension Array where Element: Comparable {
+    /// ソートされた配列内で、key以上の要素の内の一番左側のインデックスを返す
+    func lowerBound(_ value: Element) -&gt; Int {
+        var left = 0
+        var right = self.count
+        while (left &lt; right) {
+            let mid = left + (right - left) / 2
+            if (self[mid] &lt; value) {
+                left = mid + 1
+            } else {
+                right = mid
+            }
+        }
+        return left
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>23FD6728-007D-4036-AEAA-5C9E71A10847</string>
+	<string>799B35F5-133C-4BB7-85FF-53D5B6FEF2AE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read Array&lt;Int&gt;</string>
+	<string>lower_bound - Binary search</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

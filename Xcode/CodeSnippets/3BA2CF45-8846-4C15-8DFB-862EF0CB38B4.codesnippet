@@ -3,24 +3,42 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>intarray</string>
+	<string>base</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
 		<string>TopLevel</string>
-		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init).map { Int($0)! }</string>
+	<string>/// N進法から 10進法への変換
+func baseN_to_int(_ str: String, base N: Int) -&gt; Int {
+    var ans = 0
+    var x = 1
+    for s in str.reversed() {
+        ans += Int(String(s))! * x
+        x *= N
+    }
+    return ans
+}
+
+/// 10進法から N進法への変換
+func int_to_baseN(_ num: Int, base N: Int) -&gt; String {
+    var ans = ""
+    var n = num
+    while n &gt; 0 {
+        let c = String(n % N)
+        ans = c + ans
+        n /= N
+    }
+    return ans
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>23FD6728-007D-4036-AEAA-5C9E71A10847</string>
+	<string>3BA2CF45-8846-4C15-8DFB-862EF0CB38B4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read Array&lt;Int&gt;</string>
+	<string>10進法 と N進法の相互変換</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,24 +3,45 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>intarray</string>
+	<string>Array3D</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 		<string>CodeBlock</string>
-		<string>TopLevel</string>
 		<string>StringOrComment</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#array#&gt; = readLine()!.split(separator: " ").map(String.init).map { Int($0)! }</string>
+	<string>struct Array3D&lt;Element&gt; {
+    let n1: Int
+    let n2: Int
+    let n3: Int
+    private var elements: [Element]
+ 
+    init(repeating: Element, _ n1: Int, _ n2: Int, _ n3: Int) {
+        self.n1 = n1
+        self.n2 = n2
+        self.n3 = n3
+        self.elements = [Element](repeating: repeating, count: n1 * n2 * n3)
+    }
+ 
+    subscript(i: Int, j: Int, k: Int) -&gt; Element {
+        get {
+            elements[(i * n2 + j) * n3 + k]
+        }
+        set {
+            elements[(i * n2 + j) * n3 + k] = newValue
+        }
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>23FD6728-007D-4036-AEAA-5C9E71A10847</string>
+	<string>EC42C331-AE81-4D0F-894B-151295876CE7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read Array&lt;Int&gt;</string>
+	<string>Array3D</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
