@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BFS</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+// ref: https://atcoder.jp/contests/abc209/submissions/24148019
+// 想定解: ２分グラフ + 幅優先探索
+/*
+  Deque (pronounced "deck"), a double-ended queue
+
+  All enqueuing and dequeuing operations are O(1).
+*/
+public struct Deque&lt;T&gt; {
+  private var array: [T?]
+  private var head: Int
+  private var capacity: Int
+  private let originalCapacity: Int
+
+  public init(_ capacity: Int = 10) {
+    self.capacity = max(capacity, 1)
+    originalCapacity = self.capacity
+    array = [T?](repeating: nil, count: capacity)
+    head = capacity
+  }
+
+  public var isEmpty: Bool {
+    return count == 0
+  }
+
+  public var count: Int {
+    return array.count - head
+  }
+
+  public mutating func enqueue(_ element: T) {
+    array.append(element)
+  }
+
+  public mutating func enqueueFront(_ element: T) {
+    if head == 0 {
+      capacity *= 2
+      let emptySpace = [T?](repeating: nil, count: capacity)
+      array.insert(contentsOf: emptySpace, at: 0)
+      head = capacity
+    }
+
+    head -= 1
+    array[head] = element
+  }
+
+  public mutating func dequeue() -&gt; T? {
+    guard head &lt; array.count, let element = array[head] else { return nil }
+
+    array[head] = nil
+    head += 1
+
+    if capacity &gt;= originalCapacity &amp;&amp; head &gt;= capacity*2 {
+      let amountToRemove = capacity + capacity/2
+      array.removeFirst(amountToRemove)
+      head -= amountToRemove
+      capacity /= 2
+    }
+    return element
+  }
+
+  public mutating func dequeueBack() -&gt; T? {
+    if isEmpty {
+      return nil
+    } else {
+      return array.removeLast()
+    }
+  }
+
+  public func peekFront() -&gt; T? {
+    if isEmpty {
+      return nil
+    } else {
+      return array[head]
+    }
+  }
+
+  public func peekBack() -&gt; T? {
+    if isEmpty {
+      return nil
+    } else {
+      return array.last!
+    }
+  }
+}
+
+var colors = [Bool?].init(repeating: nil, count: N)
+var queue = Deque&lt;Int&gt;()
+queue.enqueue(0)
+colors[0] = false
+
+while let q = queue.dequeue() {
+    for next in G[q] {
+        guard colors[next] == nil else { continue }
+        colors[next] = !colors[q]!
+        queue.enqueue(next)
+    }
+}
+
+for _ in 0..&lt;Q {
+    let (c, d): (Int, Int) = { let line = readLine()!.split(separator: " ").map(String.init); return (Int(line[0])!, Int(line[1])!) }()
+
+    print(colors[c - 1] == colors[d - 1] ? "Town" : "Road")
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F79AAA9A-2BD5-4E03-9F27-78D71A9C6B27</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>幅優先探索 - BFS</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
