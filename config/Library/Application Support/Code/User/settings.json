@@ -20,5 +20,6 @@
     "debug.onTaskErrors": "showErrors",
     "window.zoomLevel": 2,
     "editor.formatOnSave": true,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "editor.inlineSuggest.enabled": true
 }
