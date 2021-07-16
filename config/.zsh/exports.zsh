@@ -59,3 +59,6 @@ SAVEHIST=1000000
 # share .zshhistory
 setopt inc_append_history
 setopt share_history
+
+export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
+export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
