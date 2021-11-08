@@ -7,7 +7,6 @@
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
-		<string>ClassImplementation</string>
 		<string>StringOrComment</string>
 		<string>CodeBlock</string>
 	</array>

@@ -6,10 +6,8 @@
 	<string>varrayint3</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
-		<string>ClassImplementation</string>
 		<string>StringOrComment</string>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let (&lt;#a#&gt;, &lt;#b#&gt;, &lt;#c#&gt;) = (0..&lt;&lt;#count#&gt;).reduce(into: ([Int](), [Int](), [Int]())) { r, _ in

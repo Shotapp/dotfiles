@@ -6,10 +6,8 @@
 	<string>varraystring</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
-		<string>ClassImplementation</string>
 		<string>StringOrComment</string>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#varray#&gt; = (0..&lt;&lt;#count#&gt;).map { _ in readLine()! }</string>

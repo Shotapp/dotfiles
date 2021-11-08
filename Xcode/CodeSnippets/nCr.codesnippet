@@ -6,10 +6,8 @@
 	<string>ncr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
-		<string>TopLevel</string>
 		<string>StringOrComment</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func ncr&lt;Integer&gt;(_ n: Integer, _ r: Integer, modulus: Integer?) -&gt; Integer where Integer: BinaryInteger, Integer.Stride: SignedInteger {

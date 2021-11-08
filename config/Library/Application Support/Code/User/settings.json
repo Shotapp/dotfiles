@@ -18,6 +18,7 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "files.autoSave": "onFocusChange",
     "debug.onTaskErrors": "showErrors",
+    "window.zoomLevel": 2,
     "git.enableSmartCommit": true,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
@@ -28,6 +29,5 @@
         "ini": false
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "window.zoomLevel": 2,
     "terminal.integrated.gpuAcceleration": "off"
 }

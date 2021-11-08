@@ -6,8 +6,6 @@
 	<string>radix2int</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
 		<string>StringOrComment</string>
 		<string>TopLevel</string>
 	</array>

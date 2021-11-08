@@ -6,6 +6,7 @@
 	<string>upper_bound</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
+		<string>StringOrComment</string>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>

@@ -3,23 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>alphabets</string>
+	<string>intarray2d</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>StringOrComment</string>
+		<string>CodeBlock</string>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let alphabets = "abcdefghijklmnopqrstuvwxyz"</string>
+	<string>var A = Array2D(repeating: 0, &lt;# X #&gt;, &lt;# Y #&gt;)
+for x in 0 ..&lt; A.x {
+    let scan = readLine()!.split(separator: " ").map(String.init).map { Int($0)! }
+    for y in 0 ..&lt; A.y {
+        A[x, y] = scan[y]
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DC746E94-FF6A-409D-90C1-1C190B94673A</string>
+	<string>5FD88BBB-C845-4F4B-A4B2-F1F269390CCC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Alphabets</string>
+	<string>Read Array2D&lt;Int&gt;</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

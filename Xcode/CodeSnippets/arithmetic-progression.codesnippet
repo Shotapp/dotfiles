@@ -6,10 +6,8 @@
 	<string>tousasuuretsu</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
-		<string>ClassImplementation</string>
 		<string>StringOrComment</string>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>func 等差数列の和(a 初項: Int, l 末項: Int, n 項数: Int, d 公差: Int) -&gt; Int {

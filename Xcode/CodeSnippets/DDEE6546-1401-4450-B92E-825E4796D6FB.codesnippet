@@ -6,8 +6,6 @@
 	<string>Array2D</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
 		<string>StringOrComment</string>
 		<string>TopLevel</string>
 	</array>
@@ -31,6 +29,25 @@
             elements[x + y * self.x] = newValue
         }
     }
+    
+    subscript(safe x: Int, y: Int) -&gt; Element? {
+        get {
+            if (0 ..&lt; (self.x * self.y)).contains(x + y * self.x) {
+                return elements[x + y * self.x]
+            } else {
+                return nil
+            }
+        }
+        set {
+            if (0 ..&lt; (self.x * self.y)).contains(x + y * self.x), let newValue = newValue {
+                elements[x + y * self.x] = newValue
+            }
+        }
+    }
+
+    subscript(safe x: Int, y: Int, default value: Element) -&gt; Element {
+        self[safe: x, y] ?? value
+    }
 }
 
 extension Optional: CustomStringConvertible where Wrapped: CustomStringConvertible {
@@ -51,6 +68,15 @@ extension Array2D: CustomStringConvertible where Element: CustomStringConvertibl
                 .joined(separator: " ")
         }
         return text
+    }
+    var reverseHorizon: Self {
+        var a = self
+        for _x in 0..&lt;x {
+            for _y in 0..&lt;y {
+                a[_x, _y] = self[x - _x - 1, _y]
+            }
+        }
+        return a
     }
 }
 </string>

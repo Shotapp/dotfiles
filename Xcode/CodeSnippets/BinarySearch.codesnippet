@@ -6,10 +6,8 @@
 	<string>binarySearch</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
-		<string>TopLevel</string>
 		<string>StringOrComment</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>/// `[ok ..&lt; ng]` or `[ng ..&lt; ok]`な半開区間binarySearch

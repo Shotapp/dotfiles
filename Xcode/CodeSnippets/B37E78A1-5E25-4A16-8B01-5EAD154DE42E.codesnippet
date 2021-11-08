@@ -3,23 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>alphabets</string>
+	<string>isprime</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>StringOrComment</string>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let alphabets = "abcdefghijklmnopqrstuvwxyz"</string>
+	<string>extension BinaryInteger {
+    var isPrime: Bool {
+        let value = Int(self)
+        if value &lt; 2 { return false }
+        if value &lt;= 3 { return true }
+        if value.isMultiple(of: 2) { return false }
+        for n in stride(from: 3, through: Int(Double(value).squareRoot() + 1.5), by: 2) {
+            if value.isMultiple(of: n) { return false }
+        }
+        return true
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DC746E94-FF6A-409D-90C1-1C190B94673A</string>
+	<string>B37E78A1-5E25-4A16-8B01-5EAD154DE42E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Alphabets</string>
+	<string>isPrime</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
