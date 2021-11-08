@@ -59,5 +59,5 @@ SAVEHIST=1000000
 setopt inc_append_history
 setopt share_history
 
-export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
-export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
+export PATH=$PATH:/Users/shota/Library/"Application Support"/JetBrains/Toolbox/apps/AndroidStudio/ch-0/203.7621141/"Android Studio.app"/Contents/jre/Contents/Home/bin
+export JAVA_HOME=/Users/shota/Library/"Application Support"/JetBrains/Toolbox/apps/AndroidStudio/ch-0/203.7621141/"Android Studio.app"/Contents/jre/Contents/Home
