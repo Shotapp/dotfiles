@@ -142,94 +142,11 @@
                         ]
                     },
                     {
-                        "description": "Left ctrl + alt + ijkl to page up/page down",
+                        "description": "Left ctrl + hjkl to arrow keys Vim",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control",
-                                            "left_alt"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_up"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control",
-                                            "left_alt"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "page_down"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Left ctrl + ijkl to arrow keys",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "j",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_control"
@@ -248,7 +165,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_control"
@@ -267,7 +184,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_control"
@@ -299,30 +216,6 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Ctrl + H to Delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
                                     }
                                 ],
                                 "type": "basic"
