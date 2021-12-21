@@ -18,7 +18,7 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "files.autoSave": "onFocusChange",
     "debug.onTaskErrors": "showErrors",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 3,
     "git.enableSmartCommit": true,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
