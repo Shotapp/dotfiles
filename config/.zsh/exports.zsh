@@ -59,5 +59,11 @@ SAVEHIST=1000000
 setopt inc_append_history
 setopt share_history
 
-export PATH=$PATH:/Users/shota/Library/"Application Support"/JetBrains/Toolbox/apps/AndroidStudio/ch-0/203.7621141/"Android Studio.app"/Contents/jre/Contents/Home/bin
-export JAVA_HOME=/Users/shota/Library/"Application Support"/JetBrains/Toolbox/apps/AndroidStudio/ch-0/203.7621141/"Android Studio.app"/Contents/jre/Contents/Home
+# Java 11
+export PATH=$PATH:/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+## Java 8
+# export PATH=$PATH:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/bin
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+
+export ANDROID_SDK_ROOT=/Users/shota/Library/Android/sdk

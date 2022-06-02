@@ -18,7 +18,6 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "files.autoSave": "onFocusChange",
     "debug.onTaskErrors": "showErrors",
-    "window.zoomLevel": 3,
     "git.enableSmartCommit": true,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
@@ -29,5 +28,10 @@
         "ini": false
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.gpuAcceleration": "off"
+    "terminal.integrated.gpuAcceleration": "off",
+    "window.zoomLevel": 1,
+    "files.associations": {
+        "*.swifttemplate": "swift"
+    },
+    "window.newWindowDimensions": "inherit"
 }
