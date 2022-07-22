@@ -9,10 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>struct _Previews: PreviewProvider {
+	<string>struct &lt;#View#&gt;_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-
+			&lt;#View#&gt;()
         }
     }
 }
@@ -28,6 +28,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
