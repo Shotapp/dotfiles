@@ -10,17 +10,9 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>extension BinaryInteger {
-    var isPrime: Bool {
-        let value = Int(self)
-        if value &lt; 2 { return false }
-        if value &lt;= 3 { return true }
-        if value.isMultiple(of: 2) { return false }
-        for n in stride(from: 3, through: Int(Double(value).squareRoot() + 1.5), by: 2) {
-            if value.isMultiple(of: n) { return false }
-        }
-        return true
-    }
+	<string>extension Int {
+    // 123 -&gt; [1, 2, 3]
+    var digits: [Int] { Array(String(self)).map { Int(String($0))! } }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B37E78A1-5E25-4A16-8B01-5EAD154DE42E</string>

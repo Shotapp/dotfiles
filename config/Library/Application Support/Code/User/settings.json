@@ -33,5 +33,9 @@
     "files.associations": {
         "*.swifttemplate": "swift"
     },
-    "window.newWindowDimensions": "inherit"
+    "window.newWindowDimensions": "inherit",
+    "files.trimTrailingWhitespace": true,
+    "pasteImage.basePath": "${currentFileDir}/..",
+    "pasteImage.path": "${currentFileDir}/../images",
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}/${imageFilePath}${imageSyntaxSuffix}"
 }

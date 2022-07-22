@@ -10,20 +10,72 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>extension Array where Element: Comparable {
-    /// ソートされた配列内で、key より大きいの要素の内の一番左側のインデックスを返す
-    func upperBound(_ value: Element) -&gt; Int {
-        var left = 0
-        var right = self.count
-        while (left &lt; right) {
-            let mid = left + (right - left) / 2
-            if (self[mid] &lt;= value) {
-                left = mid + 1
-            } else {
-                right = mid
-            }
+	<string>struct UnionFind&lt;Element&gt; where Element: Hashable {
+    typealias Element = Element
+
+    private var parent: [Element: Element]
+    private var count: [Element: Int]
+
+    init() {
+        parent = [:]
+        count = [:]
+    }
+
+    /// `v`の代表元を返す。
+    ///
+    /// ```
+    /// var uf = HashedUnionFind&lt;Int&gt;()
+    /// uf.unite(0, 1)
+    /// uf.unite(0, 2)
+    /// uf.unite(3, 4)
+    /// assert(uf.find(0) == uf.find(1))
+    /// assert(uf.find(0) == uf.find(2))
+    /// assert(uf.find(3) == uf.find(4))
+    /// ```
+    ///
+    /// - Complexity: 償却O(log n)
+    mutating func find(_ v: Element) -&gt; Element {
+        guard let p = parent[v] else { return v }
+        if v == p {
+            return v
+        } else {
+            let newParent = find(p)
+            parent[v] = newParent
+            return newParent
         }
-        return left
+    }
+
+    /// 頂点`u`と頂点`v`を辺で繋ぐ。
+    ///
+    /// - Complexity: 償却O(log n)
+    mutating func unite(_ u: Element, _ v: Element) {
+        var u = find(u)
+        var v = find(v)
+        guard u != v else { return }
+        if count[u, default: 1] &lt; count[v, default: 1] {
+            swap(&amp;u, &amp;v)
+        }
+        count[u, default: 1] += count[v, default: 1]
+        parent[v] = u
+    }
+
+    /// 頂点`u`が属する連結成分の頂点数を返す。
+    ///
+    /// ```
+    /// var uf = HashedUnionFind&lt;Int&gt;()
+    /// uf.unite(0, 1)
+    /// uf.unite(0, 2)
+    /// uf.unite(3, 4)
+    /// assert(uf.count(0) == 3)
+    /// assert(uf.count(1) == 3)
+    /// assert(uf.count(2) == 3)
+    /// assert(uf.count(3) == 2)
+    /// assert(uf.count(4) == 2)
+    /// ```
+    ///
+    /// - Complexity: 償却O(log n)
+    mutating func count(_ u: Element) -&gt; Int {
+        count[find(u), default: 1]
     }
 }
 </string>

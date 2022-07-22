@@ -3,25 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>int3</string>
+	<string>preview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>StringOrComment</string>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let (&lt;#n#&gt;, &lt;#m#&gt;, &lt;#o#&gt;, &lt;#p#&gt;): (Int, Int, Int, Int) = { let l = readLine()!.split(separator: " ").map(String.init); return (Int(l[0])!, Int(l[1])!, Int(l[2])!, Int(l[3])!) }()</string>
+	<string>struct _Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+
+        }
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DEFEF726-D0B0-4CFA-A4BB-36812FE075B0</string>
+	<string>39439D5B-2FBD-4013-8FCD-21357987FA6D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>Create new PreviewProvider</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Read (Int, Int, Int)</string>
+	<string>Preview</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
