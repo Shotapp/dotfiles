@@ -8,6 +8,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew install ag
 brew install coreutils
 brew install grep
 brew install git
