@@ -35,7 +35,7 @@
     },
     "window.newWindowDimensions": "inherit",
     "files.trimTrailingWhitespace": true,
-    "pasteImage.basePath": "${currentFileDir}/..",
-    "pasteImage.path": "${currentFileDir}/../images",
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.path": "${projectRoot}/images",
     "pasteImage.insertPattern": "${imageSyntaxPrefix}/${imageFilePath}${imageSyntaxSuffix}"
 }
