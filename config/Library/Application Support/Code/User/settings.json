@@ -37,5 +37,8 @@
     "files.trimTrailingWhitespace": true,
     "pasteImage.basePath": "${projectRoot}",
     "pasteImage.path": "${projectRoot}/images",
-    "pasteImage.insertPattern": "${imageSyntaxPrefix}/${imageFilePath}${imageSyntaxSuffix}"
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}/${imageFilePath}${imageSyntaxSuffix}",
+    "xml.server.binary.trustedHashes": [
+        "1facb3e258f78f295a988276a27ddd28465b10ab2ce9d81a07f9decee26abd39"
+    ]
 }
