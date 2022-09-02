@@ -23,6 +23,7 @@ brew install fzf
 brew install mas
 brew install carthage
 brew install jq
+brew install tldr
 brew install --cask zoomus
 brew install --cask visual-studio-code
 # Logi Capture
