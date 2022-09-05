@@ -40,6 +40,7 @@ brew install --cask reveal
 brew install --cask sourcetree
 brew install --cask gifox
 brew install --cask skitch
+brew install --cask zoom
 
 # Remove outdated versions from the cellar.
 brew cleanup
