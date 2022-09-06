@@ -7,6 +7,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
 '
 
+## Functions
+
 function fzf-find-current () {
   local selected_dir=$(find . | fzf --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
@@ -16,7 +18,6 @@ function fzf-find-current () {
   zle clear-screen
 }
 zle -N fzf-find-current
-bindkey '^\' fzf-find-current
 
 function fzf-ghq-list () {
   local selected_dir=$(ghq list -p | fzf --query "$LBUFFER")
@@ -27,7 +28,6 @@ function fzf-ghq-list () {
   zle clear-screen
 }
 zle -N fzf-ghq-list
-bindkey '^]' fzf-ghq-list
 
 function peco-history-selection() {
     BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
@@ -35,8 +35,8 @@ function peco-history-selection() {
     zle reset-prompt
 }
 zle -N peco-history-selection
-bindkey '^R' peco-history-selection
 
+##
 
 if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
     autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -47,4 +47,10 @@ if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]
     zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
 fi
 
-mkdir -p $HOME/.cache/shell/ 
+mkdir -p $HOME/.cache/shell/
+
+## Binding
+
+bindkey '^]' fzf-ghq-list
+bindkey '^R' peco-history-selection
+bindkey '^F' fzf-find-current
