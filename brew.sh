@@ -41,6 +41,7 @@ brew install --cask sourcetree
 brew install --cask gifox
 brew install --cask skitch
 brew install --cask zoom
+brew install --cask xcodes
 
 # Remove outdated versions from the cellar.
 brew cleanup
