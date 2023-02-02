@@ -1,6 +1,6 @@
 [user]
 	name = Shota Kashihara
-	email = mercury4th@gmail.com
+	email = shota.kashihara@paypay-corp.co.jp
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -26,11 +26,11 @@
 [alias]
 	acp = !git add -A && git commit -m 'update' && git push
 [core]
-	excludesfile = /Users/shota/.gitignore_global
+	excludesfile = /Users/shota.kashihara/.gitignore_global
 	editor = code --wait
 [url "https://github.com/"]
 	insteadOf = git@github.com:
 [url "https://"]
 	insteadOf = git://
 [commit]
-	template = /Users/shota/.stCommitMsg
+	template = ~/.stCommitMsg

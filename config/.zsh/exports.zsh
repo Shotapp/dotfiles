@@ -7,7 +7,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/.wantedly/bin:$PATH
 
 # xcode-install
-export XCODE_INSTALL_USER="shota@wantedly.com"
+export XCODE_INSTALL_USER="shota.kashihara@paypay-corp.co.jp"
 
 # Xcode
 export XCODE_APP=$(xcode-select -p)/../../
@@ -68,4 +68,4 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
 # export PATH=$PATH:/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/bin
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
 
-export ANDROID_SDK_ROOT=/Users/shota/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
